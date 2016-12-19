@@ -13,26 +13,42 @@ class CommentsController < ApplicationController
 		end
 	end
 
-	def edit
-		@post = Post.find(params[:post_id])
-		@comment = @post.comments.find(params[:id])
+	def edit 
+		if set_comment
+			@post = Post.find(params[:post_id])
+			@comment = @post.comments.find(params[:id])
+		end
 	end
 
 	def update
-		@post = Post.find(params[:post_id])
-		@comment = @post.comments.find(params[:id])
+		if set_comment
+			@post = Post.find(params[:post_id])
+			@comment = @post.comments.find(params[:id])
 
-		if @comment.update(params[:comment].permit(:comment))
-			redirect_to post_path(@post)
+			if @comment.update(params[:comment].permit(:comment))
+				redirect_to post_path(@post)
+			else
+				render 'edit'
+			end
 		else
-			render 'edit'
+			redirect_to post_path(@post)
 		end
 	end
 
 	def destroy
+		if set_comment
+			@post = Post.find(params[:post_id])
+			@comment = @post.comments.find(params[:id])
+			@comment.destroy
+			redirect_to post_path(@post)
+		end
+	end
+
+	private
+
+	def set_comment
 		@post = Post.find(params[:post_id])
 		@comment = @post.comments.find(params[:id])
-		@comment.destroy
-		redirect_to post_path(@post)
+		current_user.id == @comment.user.id 
 	end
 end

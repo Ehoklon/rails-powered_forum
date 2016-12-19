@@ -27,23 +27,23 @@ ru:
       less_than_x_seconds:
         zero: 'менее секунды назад'
         one: '1 секунды'
-        other: '{{count}} секунд'
+        other: 'несколько секунд назад'
       x_seconds:
         one: '1 секунда'
-        other: '{{count}} секунд'
+        other: 'несколько секунд назад'
       less_than_x_minutes:
         zero: 'менее минуты назад'
-        one: '1 минуты'
-        other: '{{count}} минут'
+        one: '1 минуту назд'
+        other: 'несколько минут назад'
       x_minutes:
         one: '1 минуту назад'
-        other: '{{count}} минут назад'
+        other: 'несколько минут назад'
       about_x_hours:
-        one: 'час  назад'
-        other: '{{count}} часов назад'
+        one: '1 час  назад'
+        other: 'несколько часов назад'
       x_days:
         one: '1 день назад'
-        other: '{{count}} дней назад'
+        other: 'несколько дней назад'
       about_x_months:
         one: 'около месяца'
         other: '{{count}} месяцев'

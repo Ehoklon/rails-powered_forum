@@ -3,4 +3,4 @@
 test_post:
   title: TestTitle
   content: TestContent
-  user_id: <%= User.find_by_email('test@test.com').id %>
+  user_id: = User.find_by_email('test@test.com').id 
