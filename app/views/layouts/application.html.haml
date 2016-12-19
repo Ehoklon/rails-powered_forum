@@ -9,16 +9,16 @@
   %header.main_header.clearfix
     .wrapper 
       #logo
-        %p Rails-powered Forum
+        %p t('rails_powered_forum')
       #buttons
         -if user_signed_in?
-          =link_to "New Post", new_post_path
-          =link_to "Home", root_path
-          =link_to "Edit profile", edit_user_registration_path
-          %a{"data-method" => "delete", :href => "/users/sign_out", :rel => "nofollow"} Sign out
+          =link_to t('new_post'), new_post_path
+          =link_to t('home'), root_path
+          =link_to t('edit profile'), edit_user_registration_path
+          %a{"data-method" => "delete", :href => "/users/sign_out", :rel => "nofollow"} t('sign_out')
         -else
-          = link_to "Sign Up", new_user_registration_path
-          = link_to "Sign In", new_user_session_path
+          = link_to t('sign_up'), new_user_registration_path
+          = link_to t('sign_in'), new_user_session_path
   .wrapper
     %p.notice= notice
     %p.alert= alert
