@@ -1,9 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  content: MyText
-
-two:
-  title: MyString
-  content: MyText
+test_post:
+  title: TestTitle
+  content: TestContent
+  user_id: <%= User.find_by_email('test@test.com').id %>
