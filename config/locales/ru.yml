@@ -5,9 +5,9 @@ ru:
   are_you_sure: "Вы уверенны?"
   cansel: "Завершить"
   published_at: "Написанно:"
-  by: "пользователем:"
+  by: "Пользователем:"
   new_post: "Новый пост"
-  comments: "Комментарии"
+  comments: "Комментария"
   edit_reply: "Изменить ответ"
   rails_powered_forum: "Работающий на Рельсах Форум"
   home: "Домой"
@@ -15,3 +15,44 @@ ru:
   sign_out: "Выйти"
   sign_up: "Зарегистрироваться"
   sign_in: "Войти"
+  reply_to_post: "Ответы к посту"
+  input_comment: "Комментировать"
+  submit: "Подтвердить"
+  content_post: "Текст"
+  title_post: "Заголовок"
+
+  datetime:
+    distance_in_words:
+      half_a_minute: 'пол минуты'
+      less_than_x_seconds:
+        zero: 'менее секунды назад'
+        one: '1 секунды'
+        other: '{{count}} секунд'
+      x_seconds:
+        one: '1 секунда'
+        other: '{{count}} секунд'
+      less_than_x_minutes:
+        zero: 'менее минуты назад'
+        one: '1 минуты'
+        other: '{{count}} минут'
+      x_minutes:
+        one: '1 минуту назад'
+        other: '{{count}} минут назад'
+      about_x_hours:
+        one: 'час  назад'
+        other: '{{count}} часов назад'
+      x_days:
+        one: '1 день назад'
+        other: '{{count}} дней назад'
+      about_x_months:
+        one: 'около месяца'
+        other: '{{count}} месяцев'
+      x_months:
+        one: '1 месяц'
+        other: '{{count}} месяцев'
+      about_x_years:
+        one: 'около года'
+        other: '{{count}} года'
+      over_x_years:
+        one: 'более года'
+        other: '{{count}} лет'

@@ -5,15 +5,15 @@
 	#comments
 		%h2
 			= @post.comments.count
-			Comments
+			= t('comments')
 		= render @post.comments
 
-		%h3 Reply to post
+		%h3 
 		= render "comments/form"
 
 	%br/
 	%hr/
 	%br/
 
-	= link_to "Edit", edit_post_path(@post), class: "button"
-	= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "button"
+	= link_to t('edit'), edit_post_path(@post), class: "button"
+	= link_to t('delete'), post_path(@post), method: :delete, data: { confirm: t('are_you_sure') }, class: "button"
