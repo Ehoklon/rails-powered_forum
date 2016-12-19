@@ -1,0 +1,26 @@
+!!!
+%html
+%head
+  %title Rails-powered Forum
+  = csrf_meta_tags 
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' 
+  = javascript_include_tag 'application', 'data-turbolinks-track': 'reload' 
+%body
+  %header.main_header.clearfix
+    .wrapper 
+      #logo
+        %p Rails-powered Forum
+      #buttons
+        -if user_signed_in?
+          =link_to "New Post", new_post_path
+          =link_to "Home", root_path
+          =link_to "Edit profile", edit_user_registration_path
+          %a{"data-method" => "delete", :href => "/users/sign_out", :rel => "nofollow"} Sign out
+        -else
+          = link_to "Sign Up", new_user_registration_path
+          = link_to "Sign In", new_user_session_path
+  .wrapper
+    %p.notice= notice
+    %p.alert= alert
+  .wrapper
+    = yield
