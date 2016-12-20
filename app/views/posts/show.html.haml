@@ -14,6 +14,7 @@
 	%br/
 	%hr/
 	%br/
-
-	= link_to t('edit'), edit_post_path(@post), class: "button"
-	= link_to t('delete'), post_path(@post), method: :delete, data: { confirm: t('are_you_sure') }, class: "button"
+	-if current_user.id == @post.user.id
+		= link_to t('edit'), edit_post_path(@post), class: "button"
+		= link_to t('delete'), post_path(@post), method: :delete, data: { confirm: t('are_you_sure') }, class: "button"
+	

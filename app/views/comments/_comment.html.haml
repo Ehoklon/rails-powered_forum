@@ -3,5 +3,7 @@
 		%p.comment_content= comment.comment
 		%p.comment_author= comment.user.email
 	.buttons
-		= link_to t('edit'), edit_post_comment_path(comment.post, comment)
-		= link_to t('delete'), [comment.post, comment], method: :delete, data: { confirm: t('are_you_sure') }
+		- if current_user.id == comment.user.id
+			= link_to t('edit'), edit_post_comment_path(comment.post, comment)
+			= link_to t('delete'), [comment.post, comment], method: :delete, data: { confirm: t('are_you_sure') }
+		
